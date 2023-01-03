@@ -1,17 +1,26 @@
-<div class="py-5">
-    <input type="checkbox" name="" id="">
-    <label for=""> Is active</label>
-</div>
-<div class="w-72 bg-slate-400">
-    <div class="py-6 flex justify-center">
-        <img src="https://assets.stickpng.com/images/5847ea22cef1014c0b5e4833.png" alt="logo" width="200">
+<div class="w-full flex flex-col justify-center items-center">
+    <div class="py-5">
+        <input type="checkbox" (change)="mostrar = !mostrar">
+        <label for=""> Está activo</label>
     </div>
-    <div class="p-6 bg-slate-100">
-        <p>
-            Angular es un framework para aplicaciones web desarrollado 
-            en TypeScript, de código abierto, mantenido por Google, que 
-            se utiliza para crear y mantener aplicaciones web de una 
-            sola página.
-        </p>
-    </div>
+    <div *ngIf="mostrar; then verdadero else falso"></div>
+
+    <ng-template #verdadero>
+        <div class="w-72 bg-slate-400">
+            <div class="py-6 flex justify-center">
+                <img src="https://cdn.freebiesupply.com/logos/large/2x/angular-icon-1-logo-svg-vector.svg" alt="logo"
+                    width="200">
+            </div>
+            <div class="p-6 bg-slate-100">
+                <p>
+                    Angular es un framework para aplicaciones web desarrollado
+                    en TypeScript, de código abierto, mantenido por Google, que
+                    se utiliza para crear y mantener aplicaciones web de una
+                    sola página.
+                </p>
+            </div>
+        </div>
+    </ng-template>
+    <ng-template #falso></ng-template>
+
 </div>

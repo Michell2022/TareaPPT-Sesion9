@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class ViewselecComponent {
 
+  mostrar:boolean=false;
+
 }

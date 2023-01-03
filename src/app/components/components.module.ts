@@ -6,7 +6,7 @@ import { ViewselecComponent } from './viewselec/viewselec.component';
 
 @NgModule({
   declarations: [
-    ViewselecComponent
+   
   ],
   imports: [
     CommonModule
